@@ -1,5 +1,5 @@
 {% set name = "xeus-python-static" %}
-{% set version = "0.12.3" %}
+{% set version = "0.12.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: 4ebc1fa25ed4f67fd13282810a1de8aaaa3bd774a10be6d47af70f2a91f3e41e
+  sha256: d7e0f53c1a1f568c91b7b1f0a4779492a307a7708cbf7d41e0a1b714a8a5ffd7
 
 build:
   number: 0
