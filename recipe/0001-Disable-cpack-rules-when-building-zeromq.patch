@@ -1,0 +1,24 @@
+From e73c16d59360006f7a4cd6e3184d006a507d943c Mon Sep 17 00:00:00 2001
+From: martinRenou <martin.renou@gmail.com>
+Date: Fri, 3 Sep 2021 14:04:00 +0200
+Subject: [PATCH] Disable cpack rules when building zeromq
+
+---
+ CMakeLists.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6619896..a0bca88 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -88,6 +88,7 @@ set(BUILD_SHARED OFF CACHE BOOL "enable libzmq shared build" FORCE)
+ set(BUILD_STATIC ON CACHE BOOL "enable libzmq static build" FORCE)
+ set(WITH_DOC OFF CACHE BOOL "do not generate libzmq documentation" FORCE)
+ set(BUILD_TESTS OFF CACHE BOOL "do not build libzmq tests" FORCE)
++set(ENABLE_CPACK OFF CACHE BOOL "disable cpack rules" FORCE)
+ 
+ if(WIN32)
+   set(WITH_LIBSODIUM OFF CACHE BOOL "do not use libsodium in zeromq" FORCE)
+-- 
+2.31.1
+
