@@ -1,5 +1,5 @@
 {% set name = "xeus-python-static" %}
-{% set version = "0.12.5" %}
+{% set version = "0.12.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,10 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: e9a20dc610f5f57cc2fa0573278d0209e0623b090e6b711d46dec04a9d88dfda
-  patches:
-    # Disable cpack rules when building zeromq (fixed upstream)
-    - 0001-Disable-cpack-rules-when-building-zeromq.patch
+  sha256: ccbbf87df8dd855a2bd4c87eb5506e4eefb3cb42ee1516a80137a07a0fdae7d2
 
 build:
-  number: 1
+  number: 0
   skip: true  # [(win and vc<14) or ppc64le or py36]
   script: {{ PYTHON }} -m pip install . -vv
 
