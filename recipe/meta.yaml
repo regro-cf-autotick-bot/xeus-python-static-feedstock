@@ -1,5 +1,5 @@
 {% set name = "xeus-python-static" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,10 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: 7537a804fcf0974aefff01a2e373fb474fb0481942a6ac6273214530f727c4e3
+  sha256: 49444dcc77e26db3aaf221aac9eabb0d52830cac8543cd2aff7dfa09e98909ac
+  patches:
+    # Patch OpenSSL for MacOS
+    - dbfca648ddaf6aa5f1ebac76547b15db82f7c506.patch
 
 build:
   number: 0
@@ -23,6 +26,7 @@ requirements:
     - cmake
     - make                                   # [unix]
   host:
+    - openssl =1.1.1l
     - pip
     - python
     - scikit-build >=0.11.0,<0.12
@@ -30,6 +34,7 @@ requirements:
     - perl                                   # [win]
     - nasm                                   # [win]
   run:
+    - openssl =1.1.1l
     - python
     - xeus-python-shell >=0.1.5,<0.2
     - debugpy >=1.1.0,<2.0  # [py>=37]
