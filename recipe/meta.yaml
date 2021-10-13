@@ -13,7 +13,7 @@ source:
     - dbfca648ddaf6aa5f1ebac76547b15db82f7c506.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and vc<14) or ppc64le or py36]
   script: {{ PYTHON }} -m pip install . -vv
 
