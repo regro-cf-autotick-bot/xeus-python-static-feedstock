@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [(win and vc<14) or ppc64le or py36]
+  skip: true  # [(win and vc<14) or ppc64le or py==36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
