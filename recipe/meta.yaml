@@ -1,5 +1,5 @@
 {% set name = "xeus-python-static" %}
-{% set version = "0.13.4" %}
+{% set version = "0.13.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/jupyter-xeus/xeus-python-wheel/archive/{{ version }}.tar.gz
-  sha256: 0f703652f53dd5625dd51bf8f34dc5bf286c8d53bd28474d291da7972076ec94
+  sha256: 887316114fc1da553e3703b301b89249292293d36322fb0723ee94240161ea15
 
 build:
   number: 0
-  skip: true  # [(win and vc<14) or ppc64le or py36]
+  skip: true  # [(win and vc<14) or ppc64le or py==36]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
