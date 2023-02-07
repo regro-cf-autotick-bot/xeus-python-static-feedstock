@@ -27,6 +27,7 @@ requirements:
     - pip
     - python
     - scikit-build >=0.11.0,<0.14
+    - packaging <22
     - libuuid                                # [linux]
     - perl                                   # [win]
     - nasm                                   # [win]
