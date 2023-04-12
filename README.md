@@ -1,11 +1,11 @@
-About xeus-python-static
-========================
+About xeus-python-static-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-python-static-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-xeus/xeus-python
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-python-static-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Jupyter kernel for the Python language based on Xeus (static build)
 
