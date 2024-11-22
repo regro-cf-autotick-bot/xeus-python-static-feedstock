@@ -10,7 +10,7 @@ source:
   sha256: 25e973a2eef27ed81bdbd0b91dc56c36e57c22e94f34c27d655f40adcaf63630
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and vc<14) or ppc64le or py==36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - cmake
     - make                                   # [unix]
   host:
